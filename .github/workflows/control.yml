@@ -1,0 +1,66 @@
+name: Pipeline Control
+
+# 웹(Actions 탭)에서 수집 일시중지/재개:
+# Actions → Pipeline Control → Run workflow → action 선택
+# 상태 저장: 저장소 루트의 .collect-paused 마커 파일 (GITHUB_TOKEN은 repo 변수 쓰기 불가)
+on:
+  workflow_dispatch:
+    inputs:
+      action:
+        description: "수집 제어"
+        required: true
+        type: choice
+        options:
+          - pause
+          - resume
+          - status
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-insights
+  cancel-in-progress: false
+
+jobs:
+  control:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Apply
+        run: |
+          git config user.name "insight-bot"
+          git config user.email "actions@users.noreply.github.com"
+          case "${{ inputs.action }}" in
+            pause)
+              if [ -f .collect-paused ]; then
+                echo "### ⏸️ 이미 일시중지 상태입니다" >> "$GITHUB_STEP_SUMMARY"
+              else
+                date -u +%FT%TZ > .collect-paused
+                git add .collect-paused
+                git commit -m "chore: 수집 일시중지"
+                git push
+                echo "### ⏸️ 수집 일시중지됨" >> "$GITHUB_STEP_SUMMARY"
+                echo "- 매일 아침 cron: 수집·판정 스킵" >> "$GITHUB_STEP_SUMMARY"
+                echo "- 완료 처리 푸시 배포: 정상 동작" >> "$GITHUB_STEP_SUMMARY"
+              fi
+              ;;
+            resume)
+              if [ -f .collect-paused ]; then
+                git rm -q .collect-paused
+                git commit -m "chore: 수집 재개"
+                git push
+                echo "### ▶️ 수집 재개됨 — 다음 아침 cron부터 정상 수집" >> "$GITHUB_STEP_SUMMARY"
+              else
+                echo "### ▶️ 이미 수집 동작 중입니다" >> "$GITHUB_STEP_SUMMARY"
+              fi
+              ;;
+            status)
+              if [ -f .collect-paused ]; then
+                echo "### ⏸️ 일시중지 상태 (since $(cat .collect-paused))" >> "$GITHUB_STEP_SUMMARY"
+              else
+                echo "### ▶️ 수집 동작 중" >> "$GITHUB_STEP_SUMMARY"
+              fi
+              ;;
+          esac

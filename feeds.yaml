@@ -1,0 +1,28 @@
+# 수집 소스 정의 — YouTube InnerTube 검색 (API 키 불필요)
+# 각 검색은 기본 "오늘 업로드 + 조회수순"으로 조회해 VPH(시간당 조회수)를 계산하고,
+# min_views / min_vph 를 넘는 항목만 판정 대상으로 올린다.
+
+youtube:
+  gl: "KR"              # 검색 지역 (한국)
+  min_views: 10000      # 최소 조회수
+  min_vph: 1000         # 최소 시간당 조회수 — 이 미만은 급상승으로 보지 않음
+  max_per_search: 10    # 검색어당 최대 수집 건수
+  # 쇼츠 전용 2단계 수집 설정: 검색어마다 "<query> 쇼츠" 관련도 검색(shorts_query로
+  # 재정의 가능) → 후보를 player로 상세조회해 정확한 VPH·신선도 계산
+  shorts_fresh_hours: 72   # 이 시간 내 업로드된 쇼츠만 (신선도)
+  shorts_max_probe: 12     # 검색어당 상세조회(player) 상한
+  searches:
+    - query: "쇼츠"
+      shorts_query: "쇼츠"  # 기본값이 "쇼츠 쇼츠"가 되는 것 방지
+      upload: "today"     # today | week
+      sort: "viewcount"   # viewcount | date
+    - query: "챌린지"
+      upload: "today"
+    - query: "AI"
+      upload: "today"
+    - query: "이슈"
+      upload: "today"
+    - query: "꿀팁"
+      upload: "today"
+    - query: "브이로그"
+      upload: "today"
