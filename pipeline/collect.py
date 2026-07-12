@@ -610,15 +610,10 @@ status: "대기"
 - **근거:** {judgment["reason"]}
 - **액션:** {judgment["action"]}
 """
+    if judgment.get("video_script"):
+        body += f"```text\n{judgment['video_script']}\n```\n"
     if item.get("stats_line"):
         body += f"- **지표:** {item['stats_line']}\n"
-    if judgment.get("video_script"):
-        body += (
-            "\n## 영상 스크립트 (English, OfflineTube용)\n\n"
-            "> [OfflineTube](https://github.com/jeonck/OfflineTube) WebUI의 "
-            "**Video Subject**란에 그대로 붙여넣으면 나레이션·자막·BGM 영상이 자동 생성됩니다.\n\n"
-            f"```text\n{judgment['video_script']}\n```\n"
-        )
     path.write_text(body, encoding="utf-8")
     return path
 
