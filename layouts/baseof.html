@@ -41,11 +41,12 @@ h2.sec { font-size: 1.02rem; margin: 2rem 0 .6rem; color: var(--muted);
 .tags a { font-size: .74rem; color: var(--muted); margin-right: .4rem; }
 article.single h1 { font-size: 1.4rem; margin-bottom: .3rem; }
 article.single .content { margin-top: 1rem; }
-article.single .content pre { border-radius: 8px; padding: .9rem 1rem !important;
-  font-size: .85rem; line-height: 1.6; }
-article.single .content pre code, article.single .content pre code span {
+/* 코드블록(영상 스크립트) — 단일 포스트와 카드 목록 모두에서 박스 안에서 줄바꿈 */
+pre { max-width: 100%; border-radius: 8px; padding: .9rem 1rem !important;
+  font-size: .85rem; line-height: 1.6; overflow-x: auto; }
+pre code, pre code span {
   white-space: pre-wrap !important; word-break: break-word; overflow-wrap: anywhere; }
-article.single .content pre code > span { display: block !important; min-width: 0; }
+pre code > span { display: block !important; min-width: 0; }
 footer.site { margin-top: 3rem; border-top: 1px solid var(--border);
   padding-top: .8rem; font-size: .78rem; color: var(--muted); }
 </style>
