@@ -26,3 +26,5 @@ youtube:
       upload: "today"
     - query: "브이로그"
       upload: "today"
+    - query: "먹방"
+      upload: "today"

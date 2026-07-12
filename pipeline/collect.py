@@ -54,14 +54,31 @@ SUMMARY_MAX_CHARS = 1500  # 판정 프롬프트에 넣는 본문 상한
 
 VERDICTS = ("즉시조치", "백로그", "학습", "무관")
 
+# 채널 라우팅용 7개 카테고리 — 카테고리 = 채널 1개 전략(정체성 분리).
+# 무관을 제외한 모든 포스트에 이 중 하나가 자동 태깅된다.
+CATEGORIES = (
+    "생활 꿀팁", "AI·테크", "이슈·트렌드", "챌린지·밈",
+    "브이로그·일상", "먹방·푸드", "정보·지식",
+)
+
 JUDGE_PROMPT = """아래 항목을 읽고 반드시 다음 JSON 형식으로만 답하라. 다른 텍스트 금지.
 
 {{"verdict": "즉시조치|백로그|학습|무관",
+ "category": "생활 꿀팁|AI·테크|이슈·트렌드|챌린지·밈|브이로그·일상|먹방·푸드|정보·지식 중 하나 (무관이면 빈 문자열)",
  "reason": "급상승 근거(VPH/조회수)와 내 채널 소재 중 어디에 해당하는지 1줄 (무관이면 빈 문자열)",
  "action": "이번 주 안에 할 구체적 작업 1개 — 벤치마킹할 소재/후킹/포맷 수준으로 구체적으로 (무관이면 빈 문자열)",
  "video_script": "즉시조치일 때만: 아래 규칙을 따르는 영어 영상 스크립트 (그 외 verdict는 빈 문자열)",
  "tags": ["kebab-case-태그", "최대 3개"],
  "title_ko": "한국어 요약 제목"}}
+
+category 분류 기준 (무관이 아니면 반드시 아래 7개 중 정확히 하나 — 이 라벨 문자열 그대로):
+- 생활 꿀팁: 돈·시간 아끼는 팁, 정리/수납, 앱·기능 활용 등 라이프핵
+- AI·테크: 신규 AI 툴/기능 반응, 가젯, 앱 리뷰
+- 이슈·트렌드: 화제 사건·밈의 초기 신호를 요약/해설
+- 챌린지·밈: 재현 가능한 유행 동작·포맷·밈
+- 브이로그·일상: 특정 컨셉(직업/공간/루틴)이 있는 일상 기록
+- 먹방·푸드: 먹방, 음식/레시피, 맛집
+- 정보·지식: "몰랐던 사실"을 던지는 교육형 원포인트 (위 어디에도 안 맞는 지식성 소재의 catch-all)
 
 판정 기준:
 - 즉시조치: VPH가 매우 높은 초급상승 영상이고 context의 제작 여건으로 소재/포맷을
@@ -512,6 +529,12 @@ def parse_judgment(text: str) -> dict | None:
     data["action"] = str(data.get("action", "")).strip()
     script = str(data.get("video_script", "")).strip()
     data["video_script"] = script if data["verdict"] == "즉시조치" else ""
+    # 카테고리: 무관이 아니면 7개 중 하나여야 함. 벗어나면 정보·지식으로 폴백(라우팅 누락 방지)
+    category = str(data.get("category", "")).strip()
+    if data["verdict"] == "무관":
+        data["category"] = ""
+    else:
+        data["category"] = category if category in CATEGORIES else "정보·지식"
     return data
 
 
@@ -605,8 +628,10 @@ verdict: {yaml_quote(judgment["verdict"])}
 tags: [{tags}]
 source: {yaml_quote(item["url"])}
 source_name: {yaml_quote(item["source_name"])}
+category: {yaml_quote(judgment.get("category", ""))}
 status: "대기"
 ---
+- **카테고리:** {judgment.get("category", "")}
 - **근거:** {judgment["reason"]}
 - **액션:** {judgment["action"]}
 """
@@ -726,7 +751,8 @@ def main() -> int:
             log("    → 스킵 (판정 실패)")
             continue
         verdict_counts[judgment["verdict"]] += 1
-        log(f"    → {judgment['verdict']} | {judgment['title_ko']}")
+        cat = f" [{judgment['category']}]" if judgment.get("category") else ""
+        log(f"    → {judgment['verdict']}{cat} | {judgment['title_ko']}")
         if judgment["reason"]:
             log(f"      근거: {judgment['reason']}")
         if judgment["action"]:
