@@ -26,6 +26,22 @@
 각 포스트는 `근거`(급상승 근거와 채널 소재 연관성) · `액션`(이번 주 벤치마킹 작업 1개) ·
 `지표`(VPH/조회수/업로드 시각/길이/채널)를 담는다.
 
+## OfflineTube 연동 — 발견에서 제작까지
+
+🔥 **즉시조치** 판정 항목은 완성된 **영어 영상 스크립트**(90~150단어, 강한 후킹으로 시작)를
+함께 생성한다. 이 스크립트를 [OfflineTube](https://github.com/jeonck/OfflineTube)
+(로컬 AI 영상 생성 도구, Ollama+Chatterbox TTS+faster-whisper 기반)의 WebUI에
+그대로 붙여넣으면 나레이션·자막·BGM이 포함된 쇼츠 mp4가 자동 생성된다.
+
+```bash
+# OfflineTube 쪽 (별도 Mac, 최초 1회)
+git clone https://github.com/jeonck/OfflineTube.git && cd OfflineTube && ./setup.sh && ./start.sh
+# http://127.0.0.1:8501 접속 → Video Subject란에 위 스크립트 붙여넣기 → Generate Video
+```
+
+즉, 이 사이트는 "무엇을 만들지"(급상승 소재 발견 + 스크립트 초안)를,
+OfflineTube는 "어떻게 만들지"(실제 영상 렌더링)를 담당한다.
+
 ## 구조
 
 ```
