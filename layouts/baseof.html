@@ -47,6 +47,16 @@ pre { max-width: 100%; border-radius: 8px; padding: .9rem 1rem !important;
 pre code, pre code span {
   white-space: pre-wrap !important; word-break: break-word; overflow-wrap: anywhere; }
 pre code > span { display: block !important; min-width: 0; }
+/* 코드블록 복사 버튼 (JS로 주입) */
+.codewrap { position: relative; }
+.copybtn { position: absolute; top: .5rem; right: .5rem; z-index: 2;
+  font: 600 .72rem/1 -apple-system, sans-serif; color: #d7dbe0;
+  background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.22);
+  border-radius: 6px; padding: .32rem .55rem; cursor: pointer;
+  transition: background .15s, color .15s; }
+.copybtn:hover { background: rgba(255,255,255,.22); color: #fff; }
+.copybtn.copied { background: var(--green); border-color: var(--green); color: #fff; }
+.codewrap pre { padding-top: 1.9rem !important; }
 footer.site { margin-top: 3rem; border-top: 1px solid var(--border);
   padding-top: .8rem; font-size: .78rem; color: var(--muted); }
 </style>
@@ -66,5 +76,49 @@ footer.site { margin-top: 3rem; border-top: 1px solid var(--border);
   <main>{{ block "main" . }}{{ end }}</main>
   <footer class="site">매일 아침 자동 수집 · Claude 판정 기준: <a href="https://github.com/jeonck/youtube-high/blob/main/context.md">context.md</a></footer>
 </div>
+<script>
+(function () {
+  document.querySelectorAll("pre").forEach(function (pre) {
+    if (pre.parentElement.classList.contains("codewrap")) return;
+    var code = pre.querySelector("code");
+    if (!code) return;
+    var wrap = document.createElement("div");
+    wrap.className = "codewrap";
+    pre.parentNode.insertBefore(wrap, pre);
+    wrap.appendChild(pre);
+    var btn = document.createElement("button");
+    btn.className = "copybtn";
+    btn.type = "button";
+    btn.textContent = "복사";
+    btn.addEventListener("click", function () {
+      var text = code.innerText;
+      var done = function () {
+        btn.textContent = "복사됨";
+        btn.classList.add("copied");
+        setTimeout(function () {
+          btn.textContent = "복사";
+          btn.classList.remove("copied");
+        }, 1500);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(done, function () { fallback(text, done); });
+      } else {
+        fallback(text, done);
+      }
+    });
+    wrap.appendChild(btn);
+  });
+  function fallback(text, done) {
+    var ta = document.createElement("textarea");
+    ta.value = text;
+    ta.style.position = "fixed";
+    ta.style.opacity = "0";
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand("copy"); done(); } catch (e) {}
+    document.body.removeChild(ta);
+  }
+})();
+</script>
 </body>
 </html>
