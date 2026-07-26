@@ -6,7 +6,7 @@ tags: ["ai-trend", "hooking-pattern", "shorts-reformat"]
 source: "https://www.youtube.com/watch?v=J3Uxn294avs"
 source_name: "YouTube 영상"
 category: "AI·테크"
-status: "대기"
+status: "완료"
 ---
 - **카테고리:** AI·테크
 - **근거:** VPH 24,755로 초급상승이나 영어 채널·15분 롱폼 포맷으로 직접 재현 불가; AI 성능 저하 이슈는 한국 시청자 대상 쇼츠 소재로 재가공 가능하고 제목 후킹 패턴('Is Getting Dumber') 학습 가치 있음
