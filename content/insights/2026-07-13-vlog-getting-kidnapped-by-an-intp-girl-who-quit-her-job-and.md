@@ -6,7 +6,7 @@ tags: ["mbti-hook", "travel-abroad", "vlog"]
 source: "https://www.youtube.com/watch?v=MU-1bNVf66U"
 source_name: "YouTube 영상"
 category: "브이로그·일상"
-status: "대기"
+status: "완료"
 ---
 - **카테고리:** 브이로그·일상
 - **근거:** VPH 8,572으로 급상승 수준이나 17분 장편 브이로그라 쇼츠 직접 재현은 어렵고, 'INTP+퇴사+$0 해외여행' 조합의 제목 후킹 기법이 학습 대상임
