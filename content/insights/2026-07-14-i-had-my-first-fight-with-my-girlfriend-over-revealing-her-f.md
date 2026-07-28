@@ -6,7 +6,7 @@ tags: ["couple-vlog", "conflict-hook", "face-reveal"]
 source: "https://www.youtube.com/watch?v=V1xYbsbFEhA"
 source_name: "YouTube 영상"
 category: "브이로그·일상"
-status: "대기"
+status: "완료"
 ---
 - **카테고리:** 브이로그·일상
 - **근거:** VPH 6,727로 급상승권이나, 커플 갈등·얼굴 공개 소재는 실제 파트너 출연이 필요해 1인 제작 즉시 재현은 어렵고, 제목의 갈등·긴장감 훅 패턴이 학습 포인트임
