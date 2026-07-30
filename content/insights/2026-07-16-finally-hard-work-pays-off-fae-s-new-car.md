@@ -6,7 +6,7 @@ tags: ["성취-브이로그", "제목-후킹", "감동-서사"]
 source: "https://www.youtube.com/watch?v=eL9MGZaJEiE"
 source_name: "YouTube 영상"
 category: "브이로그·일상"
-status: "대기"
+status: "완료"
 ---
 - **카테고리:** 브이로그·일상
 - **근거:** VPH 10,988로 초급상승이나, 채널명(Ai Fae)과 달리 내용은 개인 신차 구입 성취 브이로그라 소재 직접 재현은 불가 — 제목 후킹('FINALLY, HARD WORK PAYS OFF')의 성취 감동 서사 패턴이 학습 포인트
