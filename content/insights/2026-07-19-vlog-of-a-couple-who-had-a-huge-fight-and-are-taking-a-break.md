@@ -6,7 +6,7 @@ tags: ["emotional-hook", "conflict-narrative", "vlog-title-formula"]
 source: "https://www.youtube.com/watch?v=zvLbR_BtsLk"
 source_name: "YouTube 영상"
 category: "브이로그·일상"
-status: "대기"
+status: "완료"
 ---
 - **카테고리:** 브이로그·일상
 - **근거:** VPH 6,990으로 급상승 구간이나, 25분 장편 커플 브이로그로 1인 제작 쇼츠로 재현 불가 — 단, '기념일 직후 대판 싸움·휴식 선언'이라는 갈등 서술 제목 후킹이 강해 배울 점이 뚜렷함
