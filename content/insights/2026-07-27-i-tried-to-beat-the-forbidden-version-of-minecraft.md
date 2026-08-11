@@ -6,7 +6,7 @@ tags: ["forbidden-hook", "challenge-format", "title-pattern"]
 source: "https://www.youtube.com/watch?v=5Btk9vlvLgE"
 source_name: "YouTube 영상"
 category: "챌린지·밈"
-status: "대기"
+status: "완료"
 ---
 - **카테고리:** 챌린지·밈
 - **근거:** VPH 17,435로 초급상승이나 22분 50초 마인크래프트 게임플레이 영상이라 스마트폰 쇼츠로 재현 불가; 'FORBIDDEN Version of X'라는 금지·비밀 프레임 + 도전 후킹 공식이 클릭률을 견인한 패턴은 학습 가치 있음
