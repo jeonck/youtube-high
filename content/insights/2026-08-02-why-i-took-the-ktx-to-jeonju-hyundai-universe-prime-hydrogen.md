@@ -6,7 +6,7 @@ tags: ["question-hook", "travel-vlog", "title-formula"]
 source: "https://www.youtube.com/watch?v=aajicS1NlhM"
 source_name: "YouTube 영상"
 category: "브이로그·일상"
-status: "대기"
+status: "완료"
 ---
 - **카테고리:** 브이로그·일상
 - **근거:** VPH 18,206으로 초급상승이나 버스 납차 전문 채널 콘텐츠로 1인 크리에이터가 소재 자체를 재현하기 어려움 — 단, 'Why I took the KTX to Jeonju' 형식의 질문형 후킹 제목이 높은 CTR을 이끈 구조적 학습 포인트
