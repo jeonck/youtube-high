@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "nexlev": {
+      "type": "http",
+      "url": "https://prod.dashboard.nexlev.io/api/claude-mcp"
+    }
+  }
+}

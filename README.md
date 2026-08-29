@@ -47,6 +47,7 @@ OfflineTube는 "어떻게 만들지"(실제 영상 렌더링)를 담당한다.
 ```
 .
 ├── context.md                  # 내 채널/제작 여건 = 판정 기준 (여기를 고치면 판정이 바뀜)
+├── .mcp.json                   # NexLev MCP 연결 설정 (Claude Code 프로젝트 스코프)
 ├── feeds.yaml                  # 검색어·임계값 정의 (youtube 섹션, RSS 등 추가 가능)
 ├── pipeline/
 │   ├── collect.py              # InnerTube 수집 → VPH 계산 → 판정 → 포스트 생성
@@ -93,6 +94,46 @@ hugo server        # → http://localhost:1313/youtube-high/
 환경변수:
 - `JUDGE_BACKEND`: `claude-code`(구독, 기본 — claude CLI가 PATH에 있을 때) | `api`(API 키 과금)
 - `CLAUDE_MODEL`(기본 `claude-sonnet-4-6`), `MAX_ITEMS`(기본 30), `GITHUB_TOKEN`(선택)
+
+## NexLev MCP — 채널·니치 리서치 (선택)
+
+[NexLev](https://www.nexlev.io/mcp) MCP를 붙이면 Claude가 이 저장소 안에서 YouTube 채널·니치
+데이터(채널 탐색, 조회수/수익 추정, 니치 분석, 자막 등 60여 개 도구)를 직접 조회할 수 있다.
+파이프라인이 발견한 급상승 영상을 놓고 "이 채널 규모/수익 추정은?", "같은 니치에서 최근
+성장한 채널은?" 같은 후속 리서치를 바로 이어갈 수 있다.
+
+설정은 저장소에 커밋돼 있으므로(`.mcp.json`) 추가 작업 없이 인증만 하면 된다.
+
+```bash
+# 1) 저장소 루트에서 claude 실행 → 프로젝트 MCP 서버 승인 프롬프트에 동의
+claude
+
+# 2) NexLev 계정으로 OAuth 인증 (브라우저가 열림)
+/mcp            # 목록에서 nexlev 선택 → Authenticate
+
+# 3) 연결 확인
+claude mcp list
+```
+
+```json
+// .mcp.json
+{
+  "mcpServers": {
+    "nexlev": {
+      "type": "http",
+      "url": "https://prod.dashboard.nexlev.io/api/claude-mcp"
+    }
+  }
+}
+```
+
+- **전송 방식**: Streamable HTTP · **인증**: OAuth (API 키 불필요, 저장소에 비밀값 없음)
+- **읽기 전용**: 조회만 가능하며 채널 설정 변경·업로드는 불가
+- 무료 플랜으로도 동작하고, 유료 플랜(Lite/Pro/Premium)이면 **그 계정으로 로그인해야**
+  해당 플랜의 rate limit이 적용된다
+- claude.ai 웹/앱에서 쓰려면 Settings → Connectors → Add custom connector에 같은 URL 등록
+- 파이프라인(`pipeline/collect.py`)의 자동 판정에는 관여하지 않는다 — 사람이 대화형으로
+  쓰는 리서치 도구다
 
 ## 운영 루틴
 
