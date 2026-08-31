@@ -6,7 +6,7 @@ tags: ["morning-vlog", "celebrity-couple", "title-hook"]
 source: "https://www.youtube.com/watch?v=zcVXL0wjGJM"
 source_name: "YouTube 영상"
 category: "브이로그·일상"
-status: "대기"
+status: "완료"
 ---
 - **카테고리:** 브이로그·일상
 - **근거:** VPH 5,624로 급상승 범위이나, 조회수의 대부분이 손태영·권상우의 셀럽 파워에서 기인하며 1인 제작으로 소재 자체를 재현하기 어려움; '눈 뜨는 순간부터 붙어있는' 밀착 동행 각도의 제목 후킹 패턴은 참고 가능
