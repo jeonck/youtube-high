@@ -6,7 +6,7 @@ tags: ["no-ai-trend", "human-vs-ai-framing", "역발상-후킹"]
 source: "https://www.youtube.com/shorts/MEzKCJJvWls"
 source_name: "YouTube Shorts"
 category: "이슈·트렌드"
-status: "대기"
+status: "완료"
 ---
 - **카테고리:** 이슈·트렌드
 - **근거:** VPH 7,592로 급상승 구간이나, 100시간 스파이더맨 창작물은 1인 스마트폰 제작으로 재현 불가; 단 'NO AI' 역발상 후킹 포맷이 AI·테크 채널의 대비형 썸네일·제목 전략에서 배울 수 있음
