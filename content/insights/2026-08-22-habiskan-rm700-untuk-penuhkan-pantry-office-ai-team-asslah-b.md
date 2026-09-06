@@ -6,7 +6,7 @@ tags: ["spending-vlog", "office-vlog", "hook-format"]
 source: "https://www.youtube.com/watch?v=IWnOMgXwgzI"
 source_name: "YouTube 영상"
 category: "브이로그·일상"
-status: "대기"
+status: "완료"
 ---
 - **카테고리:** 브이로그·일상
 - **근거:** VPH 10,673으로 초급상승 수준이나, 56분 장편 말레이어 브이로그로 한국 쇼츠 채널이 직접 재현할 포맷/소재가 아님 — 단, 'RM700 소비' 지출 공개형 후킹은 참고 가치 있음

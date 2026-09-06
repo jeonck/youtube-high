@@ -6,7 +6,7 @@ tags: ["worst-x-hook", "product-testing-format", "tiktok-shop-trend"]
 source: "https://www.youtube.com/watch?v=rsBkKTApx9Y"
 source_name: "YouTube 영상"
 category: "이슈·트렌드"
-status: "대기"
+status: "완료"
 ---
 - **카테고리:** 이슈·트렌드
 - **근거:** VPH 5,954(급상승 구간)이나 16분 장편 콜라보 영상으로 쇼츠 직접 재현 대상은 아님; 'I tested the WORST X' 후킹 패턴이 AI·테크 채널 소재에 응용 가능
