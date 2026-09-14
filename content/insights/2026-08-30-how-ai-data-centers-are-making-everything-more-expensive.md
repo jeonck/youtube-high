@@ -6,7 +6,7 @@ tags: ["ai-datacenter", "longform-hooking", "비용-트렌드"]
 source: "https://www.youtube.com/watch?v=-4dc6907JYY"
 source_name: "YouTube 영상"
 category: "AI·테크"
-status: "대기"
+status: "완료"
 ---
 - **카테고리:** AI·테크
 - **근거:** VPH 37,196으로 초급상승이나, 17분짜리 롱폼 심층 다큐 포맷이라 1인 쇼츠 제작으로 직접 재현하기 어렵고 소재(AI 데이터센터 전력·비용 구조)는 배경지식 해설 수준의 각색이 필요함
