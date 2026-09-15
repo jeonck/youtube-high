@@ -6,7 +6,7 @@ tags: ["dramatic-hook", "vlog-title-formula", "브이로그"]
 source: "https://www.youtube.com/watch?v=h5c8Ctj4Koo"
 source_name: "YouTube 영상"
 category: "브이로그·일상"
-status: "대기"
+status: "완료"
 ---
 - **카테고리:** 브이로그·일상
 - **근거:** VPH 15,340으로 초급상승이지만 25분 장편 브이로그로 쇼츠 재현 불가; 빠더너스 팬덤 기반 콘텐츠이나 '모든 것을 잃은 구직자 + 경찰서 조사'라는 극적 상황 조합 제목 후킹은 클릭을 강제하는 공식으로 배울 가치가 뚜렷함
