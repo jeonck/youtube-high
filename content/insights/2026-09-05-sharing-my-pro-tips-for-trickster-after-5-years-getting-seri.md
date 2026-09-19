@@ -6,7 +6,7 @@ tags: ["pro-tips-format", "경력자-후킹", "꿀팁-포맷"]
 source: "https://www.youtube.com/watch?v=x12TDA5UJak"
 source_name: "YouTube 영상"
 category: "생활 꿀팁"
-status: "대기"
+status: "완료"
 ---
 - **카테고리:** 생활 꿀팁
 - **근거:** VPH 9,236으로 급상승권이나 게임(Trickster) 특화 콘텐츠라 소재 재현 불가 — 단, 'N년 경력자의 프로 꿀팁 공개' 포맷과 제목 후킹 패턴을 꿀팁 채널에 이식할 수 있음.
