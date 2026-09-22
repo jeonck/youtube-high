@@ -6,7 +6,7 @@ tags: ["title-hooking", "브이로그-포맷", "이중호기심"]
 source: "https://www.youtube.com/watch?v=QaAWV_cXVA8"
 source_name: "YouTube 영상"
 category: "브이로그·일상"
-status: "대기"
+status: "완료"
 ---
 - **카테고리:** 브이로그·일상
 - **근거:** VPH 12,084로 초급상승이나, 20분 롱폼 브이로그이며 '쇼츠로 인생이 바뀐 외국인 크리에이터의 한국 생활'이라는 특수 포지션은 1인 국내 크리에이터가 포맷째 재현하기 어렵다.
