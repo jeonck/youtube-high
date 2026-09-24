@@ -6,7 +6,7 @@ tags: ["ai-slop", "후킹-제목-공식", "이슈-트렌드"]
 source: "https://www.youtube.com/watch?v=K94Nr2i6b-0"
 source_name: "YouTube 영상"
 category: "이슈·트렌드"
-status: "대기"
+status: "완료"
 ---
 - **카테고리:** 이슈·트렌드
 - **근거:** VPH 10,030으로 초급상승 기준을 넘지만, 54분 장편 미국 언론사(The Daily Beast) 정치 해설 포맷은 1인 쇼츠로 직접 재현 불가; 단, 'X가 Y에 중독된 이유 | Inside X's Head' 후킹 제목 공식과 'AI 슬롭' 이슈 자체에 학습 가치 있음
