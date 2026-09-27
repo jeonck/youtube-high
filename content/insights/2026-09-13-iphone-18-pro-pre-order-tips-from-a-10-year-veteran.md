@@ -6,7 +6,7 @@ tags: ["authority-hook", "seasonal-tech", "title-pattern"]
 source: "https://www.youtube.com/watch?v=YIkQjb4b4Ko"
 source_name: "YouTube 영상"
 category: "생활 꿀팁"
-status: "대기"
+status: "완료"
 ---
 - **카테고리:** 생활 꿀팁
 - **근거:** VPH 2,800으로 3,000 미만 참고 수준이나, '10년 차 베테랑'이라는 권위 포지셔닝 후킹과 시즌성 꿀팁 포맷은 제목·썸네일 구성 학습 가치 있음
