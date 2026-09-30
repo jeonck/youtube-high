@@ -6,7 +6,7 @@ tags: ["vlog-hook-pattern", "unexpected-incident", "title-format"]
 source: "https://www.youtube.com/watch?v=KLykZWD4Pho"
 source_name: "YouTube 영상"
 category: "브이로그·일상"
-status: "대기"
+status: "완료"
 ---
 - **카테고리:** 브이로그·일상
 - **근거:** VPH 18,373으로 초급상승이나 28분 장편 브이로그이며 중국 현지 돌발 사건 소재라 한국 쇼츠 채널에서 직접 재현 불가; 'A [예상치 못한 것] Inside [일상 공간]?!' 제목 후킹 패턴과 사건 전개 내러티브 구조가 핵심 학습 포인트
