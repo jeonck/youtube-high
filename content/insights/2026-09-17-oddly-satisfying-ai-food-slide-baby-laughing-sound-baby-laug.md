@@ -6,7 +6,7 @@ tags: ["oddly-satisfying", "ai-generated-visuals", "reaction-format"]
 source: "https://www.youtube.com/watch?v=3kIcwmhgGLk"
 source_name: "YouTube 영상"
 category: "AI·테크"
-status: "대기"
+status: "완료"
 ---
 - **카테고리:** AI·테크
 - **근거:** VPH 12,096으로 초급상승이나 핵심 후킹이 '아기 웃음 소리'에 있어 1인 제작으로 직접 재현 불가; 'AI 생성 비주얼 슬라이드 + 감각적 반응' 조합 포맷은 참고 가치 있음
