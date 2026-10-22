@@ -6,7 +6,7 @@ tags: ["departure-hook", "creator-drama", "announcement-format"]
 source: "https://www.youtube.com/watch?v=KdfQ7u1hf2k"
 source_name: "YouTube 영상"
 category: "이슈·트렌드"
-status: "대기"
+status: "완료"
 ---
 - **카테고리:** 이슈·트렌드
 - **근거:** VPH 21,266으로 초급상승이나, Smosh 이탈 드라마는 한국 시청자와 무관한 서양 유튜브 이슈라 소재 직접 재현 불가 — 단 'I Left X' 선언형 첫 문장 후킹 포맷은 학습 가치 높음
