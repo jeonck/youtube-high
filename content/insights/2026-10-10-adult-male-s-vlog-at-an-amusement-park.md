@@ -6,7 +6,7 @@ tags: ["vlog-hook", "thumbnail-analysis", "retention-editing"]
 source: "https://www.youtube.com/watch?v=V4wtRsNak-Q"
 source_name: "YouTube 영상"
 category: "브이로그·일상"
-status: "대기"
+status: "완료"
 ---
 - **카테고리:** 브이로그·일상
 - **근거:** VPH 14,290으로 초급상승 수준이나, 성인 남성의 놀이공원 브이로그는 특정 개인 컨셉 기반으로 채널 소재(AI·테크, 이슈·트렌드 등)와 거리가 있어 재현 대상은 아님. 다만 8분짜리 영상이 VPH 14,290을 기록한 후킹·편집 구조는 분석 가치 있음.
