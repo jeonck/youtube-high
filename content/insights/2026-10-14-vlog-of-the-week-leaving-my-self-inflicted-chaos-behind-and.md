@@ -6,7 +6,7 @@ tags: ["chaos-to-clarity-hook", "vlog-title-pattern", "lifestyle-narrative"]
 source: "https://www.youtube.com/watch?v=IpMOh2EVH10"
 source_name: "YouTube 영상"
 category: "브이로그·일상"
-status: "대기"
+status: "완료"
 ---
 - **카테고리:** 브이로그·일상
 - **근거:** VPH 8,800으로 급상승 구간이나 26분 장편 개인 브이로그라 쇼츠 직접 재현은 어렵고, '혼돈→회복→자기계발' 서사 구조와 제목 클릭 유도 패턴이 후킹 기법 참고 자료로 유의미함
