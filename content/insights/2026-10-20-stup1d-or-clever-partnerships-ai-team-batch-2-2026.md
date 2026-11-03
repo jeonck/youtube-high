@@ -6,7 +6,7 @@ tags: ["binary-hook", "title-pattern", "creator-partnership"]
 source: "https://www.youtube.com/watch?v=svHqmYQoCro"
 source_name: "YouTube 영상"
 category: "이슈·트렌드"
-status: "대기"
+status: "완료"
 ---
 - **카테고리:** 이슈·트렌드
 - **근거:** VPH 41,099으로 초급상승 수준이나 56분 장편 리얼리티·파트너십 쇼 포맷이라 1인 쇼츠로 재현 불가; 'STUP1D OR CLEVER' 이진선택 도발형 제목 후킹 패턴은 쇼츠 첫 문장에 응용 가능
