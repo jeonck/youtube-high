@@ -6,7 +6,7 @@ tags: ["vlog-hook", "relatable-question", "브이로그"]
 source: "https://www.youtube.com/watch?v=OHRMlQDH32I"
 source_name: "YouTube 영상"
 category: "브이로그·일상"
-status: "대기"
+status: "완료"
 ---
 - **카테고리:** 브이로그·일상
 - **근거:** VPH 5,664으로 급상승 구간이나, 29분짜리 장편 브이로그라 쇼츠로 직접 재현하기 어렵고 VPH 1만 미만으로 즉시조치 기준 미달 — 다만 '살쪘어 보여?' 류의 자기 불안 공개 질문 후킹은 클릭율이 높은 패턴으로 학습 가치가 있음

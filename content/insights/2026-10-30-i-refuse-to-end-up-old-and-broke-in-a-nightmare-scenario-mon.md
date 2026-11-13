@@ -6,7 +6,7 @@ tags: ["fear-hook", "mukbang-finance", "title-pattern"]
 source: "https://www.youtube.com/watch?v=X3AWSNd7pdc"
 source_name: "YouTube 영상"
 category: "먹방·푸드"
-status: "대기"
+status: "완료"
 ---
 - **카테고리:** 먹방·푸드
 - **근거:** VPH 5,498로 급상승 구간이나 23분 장편 먹방이라 쇼츠로 직접 재현 불가 — 그러나 '노후 파산 공포'를 자극하는 제목 후킹 패턴(refuse to end up old and broke)이 먹방 콘텐츠와 결합해 클릭을 끌어낸 사례로 배울 점이 뚜렷함
