@@ -6,7 +6,7 @@ tags: ["역발상-후킹", "제목-클릭유도", "ai-테크"]
 source: "https://www.youtube.com/watch?v=p-5J9px3E3c"
 source_name: "YouTube 영상"
 category: "정보·지식"
-status: "대기"
+status: "완료"
 ---
 - **카테고리:** 정보·지식
 - **근거:** VPH 16,951로 초급상승이나 37분짜리 주식 투자 분석 롱폼이며 일본어권 채널로 재현 불가; 단 '부정 신호→역발상 매수' 구조의 제목 후킹('Plummeting X—Don't Run, Buy the Dip')은 쇼츠 제목 클릭 유도 패턴으로 학습 가치 있음
