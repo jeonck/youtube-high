@@ -6,7 +6,7 @@ tags: ["ai-generated-visuals", "oddly-satisfying", "kids-format"]
 source: "https://www.youtube.com/watch?v=Ja8_91oPl-s"
 source_name: "YouTube 영상"
 category: "AI·테크"
-status: "대기"
+status: "완료"
 ---
 - **카테고리:** AI·테크
 - **근거:** VPH 14,500으로 초급상승이지만 채널이 키즈 전용(Moo Meow Kids)이고 포맷이 '아기 웃음소리+AI 생성 푸드 슬라이드 컴필레이션'이라 한국 성인 타깃 채널에 직접 재현 불가; AI 생성 비주얼을 오들리 새티스파잉 포맷으로 묶었을 때 시청 유지율이 높다는 기법은 AI·테크 채널에서 참고할 만함
